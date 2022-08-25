@@ -1,0 +1,17 @@
+[Unit]
+Description=MAVProxy
+After=network.target rc-local.service
+
+[Service]
+Environment="HOME=/home/ubuntu/"
+ExecStart=/usr/local/bin/mavproxy.py --master=/dev/pixhawk --baudrate 115200 --out tcpin:0.0.0.0:5762 --out tcpin:0.0.0.0:5760 --aircraft Rover --daemon --non-interactive
+Restart=always
+WorkingDirectory=/home/ubuntu/
+StandardOutput=inherit
+StandardError=inherit
+
+
+[Install]
+WantedBy=multi-user.target
+
+# should by symlinked to /lib/systemd/system/mavproxy.service
