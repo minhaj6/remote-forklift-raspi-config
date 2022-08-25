@@ -1,1 +1,2 @@
-/etc/udev/rules.d/90-mhrobot.rules
+SUBSYSTEMS=="usb", ATTRS{manufacturer}=="ArduPilot", SYMLINK+="pixhawk", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{manufacturer}=="Arduino*", SYMLINK+="arduino$attr{serial}", MODE="0666"
