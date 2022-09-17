@@ -1,0 +1,17 @@
+
+[Unit]
+Requires=roscore.service
+PartOf=roscore.service
+After=network-online.target roscore.service
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/home/ubuntu/mhrover_ws/src/channel_publisher/launch/systemd_launcher.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+# should be linked to /etc/systemd/system/channel_launcher.service
+
