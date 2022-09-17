@@ -11,6 +11,8 @@ sudo ln -s /home/ubuntu/remote-forklift-raspi-config/systemd-services/roscore.se
 
 sudo ln -s /home/ubuntu/remote-forklift-raspi-config/systemd-services/channel_launcher.service /etc/systemd/system/
 
+sudo ln -s /home/ubuntu/remote-forklift-raspi-config/systemd-services/rosserial_launcher.service /etc/systemd/system/
+
 sudo ln -s /home/ubuntu/remote-forklift-raspi-config/env.sh /etc/ros/env.sh
 
 sudo ln -s /home/ubuntu/remote-forklift-raspi-config/systemd-services/mavproxy.service /lib/systemd/system/mavproxy.service
